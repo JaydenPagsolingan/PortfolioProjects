@@ -1,2 +1,1 @@
-# JaydenPagsolinganDAPortfolio
-Jayden Pagsolingan's portfolio projects
+# Jayden Pagsolingan Data Analysis Portfolio
