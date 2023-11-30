@@ -1,5 +1,10 @@
 # Project Summary: Traffic Collisions in San Diego (SQL and Tableau)
 
+## Links
+SQL query - https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/SQL%20Project:%20TrafficCollisionsinSD.sql
+Tableau report dashboard - https://public.tableau.com/app/profile/jayden.pagsolingan8481/viz/TrafficCollisionsinSanDiegoReportDashboard/ReportDashboard
+Tableau interactive dashboard - https://public.tableau.com/app/profile/jayden.pagsolingan8481/viz/TrafficCollisionsinSanDiegoInteractiveDashboard/InteractiveDashboard
+
 ## Context
 I just finished my excel project and wanted to learn SQL. I actually originally wanted to skip straight to python for data analysis because it seemed cooler,
 but I wanted to be versatile so I ended up choosing SQL. 
@@ -44,7 +49,8 @@ to find at the top of my SQL query helped to focus my energy and time.
 The biggest mistake I made was deleting columns I thought I didn't need. I realize now how powerful SQL is; I didn't realize I can query around columns
 and values I don't need. I will never delete columns or data unless absolutely necessary.
 
-When creating my dashboard, I tried to fit all my graphs in, but they wouldn't all fit. I realized I should only show the VERY IMPORTANT insights and graphs in dashboards.
+Also, I forgot to mention, but I've never tried Tableau before. I had trouble figuring out which measures go where and how I wanted to visualize my findings. When creating my dashboard, I tried to fit all my graphs in, but they wouldn't all fit. I realized I should only show the VERY IMPORTANT insights and graphs in dashboards. It took lots of trial and error, but I sat
+down at my computer (while playing some Christmas jazz music) and got it done. 
 
 I even emailed my dashboards to the SDPD to use. Hopefully they see it!
 
