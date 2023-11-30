@@ -1,9 +1,9 @@
 # Project Summary: Traffic Collisions in San Diego (SQL and Tableau)
 
 ## Links
-SQL query - https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/SQL%20Project:%20TrafficCollisionsinSD.sql
-Tableau report dashboard - https://public.tableau.com/app/profile/jayden.pagsolingan8481/viz/TrafficCollisionsinSanDiegoReportDashboard/ReportDashboard
-Tableau interactive dashboard - https://public.tableau.com/app/profile/jayden.pagsolingan8481/viz/TrafficCollisionsinSanDiegoInteractiveDashboard/InteractiveDashboard
+- SQL query - https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/SQL%20Project:%20TrafficCollisionsinSD.sql
+- Tableau report dashboard - https://public.tableau.com/app/profile/jayden.pagsolingan8481/viz/TrafficCollisionsinSanDiegoReportDashboard/ReportDashboard
+- Tableau interactive dashboard - https://public.tableau.com/app/profile/jayden.pagsolingan8481/viz/TrafficCollisionsinSanDiegoInteractiveDashboard/InteractiveDashboard
 
 ## Context
 I just finished my excel project and wanted to learn SQL. I actually originally wanted to skip straight to python for data analysis because it seemed cooler,
