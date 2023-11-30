@@ -11,7 +11,7 @@ Audience: San Diego Police Department Traffic Division
 Key Performance Indicators:
 - When and where the top collisions occur
 - Trend of collisions per neighborhood
-- Trend of reasons for collision
+- Reasons for collision
 
 */
 
