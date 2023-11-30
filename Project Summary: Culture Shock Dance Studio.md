@@ -9,10 +9,10 @@ One day during my shift at Culture Shock Dance Studio, I asked one of the manage
 I was handed 2 months worth of client data to work with given the following objectives...
 
 ## Objectives
-What days of the week have the most popular classes?
-What classes bring in the most money?
-Which instructors have the most clients?
-Any other insights?
+- What days of the week have the most popular classes?
+- What classes bring in the most money?
+- Which instructors have the most clients?
+- Any other insights?
 
 ## Techniques
 Data Cleaning
