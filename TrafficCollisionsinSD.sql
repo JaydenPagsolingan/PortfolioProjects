@@ -1,16 +1,21 @@
 /*
 
-Pre-planning
+Traffic Collisions in San Diego Data Analysis Project
 
+Contents:
+Data Cleaning
+Data Exploration (Clean and Messy Versions)
+
+Project Planning -
 Audience: San Diego Police Department Traffic Division
 Key Performance Indicators:
-- Collision Rates (Total collisions within neighborhoods, leading to injury, leading to death)
-- Reason for collision
+- When and where the top collisions occur
+- Trend of collisions per neighborhood
+- Trend of reasons for collision
 
 */
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 
 /*
