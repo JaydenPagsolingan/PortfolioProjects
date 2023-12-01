@@ -6,7 +6,7 @@ objectives, techniques I used, and my overall learning experinece.
 ## Excel Project: Culture Shock Dance Studio
 - Project Summary
 - Raw Excel Project File
-- 
+  
 ## SQL & Tableau Project: Traffic Collisions in San Diego
 - Project Summary
 - SQL Query
