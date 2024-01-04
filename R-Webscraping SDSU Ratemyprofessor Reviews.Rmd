@@ -1,0 +1,425 @@
+
+# R-Webscraping SDSU Ratemyprofessor.com Reviews
+
+library(tidyverse)
+library(RSelenium)
+
+
+# Start up
+
+# Opens chrome browser from client side
+rs_driver_object <- rsDriver(browser = "chrome", chromever = "120.0.6099.71")
+remDr <- rs_driver_object$client
+remDr$open()
+
+# Navigate (goes to the website) through all of the professors
+remDr$navigate("https://www.ratemyprofessors.com/search/professors/877")
+
+# Click out of cookies button
+remDr$findElement(using = "xpath", "//div[starts-with(@class, 'FullPageModal__')]//button")$clickElement()
+
+# Click out of the ad button
+remDr$findElement(using = "xpath", "//a[@id='bx-close-inside-1177612']")$clickElement()
+
+
+
+
+
+# MAIN CODE
+
+# Initialize data frame to collect reviews
+all_reviews <- data.frame(Professor_ID = NA,
+                          Professor_Name = NA,
+                          Overall_Rating = NA,
+                          Overall_Difficulty = NA,
+                          Department = NA,
+                          Num_of_Ratings = NA,
+                          Quality = NA,
+                          Difficulty = NA,
+                          Class_Name = NA,
+                          Comment = NA,
+                          Review_Date = NA
+)
+
+# Initialize a data frame to collect professor names for quality assurance
+ProfessorCheck <- data.frame(First_Name = character(0),
+                             Last_Name = character(0),
+                             Other_Professors = character(0))
+
+# Function that collects all professor reviews ()
+collect_review <- function(rating, professor_id, professor_name, overall_rating, cleaned_department, overall_difficulty, num_of_ratings) { 
+  
+  quality <- rating$findChildElement(using = "xpath", "(.//div[starts-with(@class, 'CardNumRating')])[3]")$getElementText() %>% 
+    unlist() %>% 
+    as.numeric()
+  
+  difficulty <- rating$findChildElement(using = "xpath", "(.//div[starts-with(@class, 'CardNumRating')])[6]")$getElementText() %>% 
+    unlist() %>% 
+    as.numeric()
+  
+  class_name <- rating$findChildElement(using = "xpath", "(.//div[starts-with(@class,'RatingHeader__StyledClass')])[2]")$getElementText() %>% 
+    unlist()
+  
+  comment <- rating$findChildElement(using = "xpath", ".//div[starts-with(@class, 'Comments__StyledComments')]")$getElementText() %>% 
+    unlist()
+  
+  review_date <- rating$findChildElement(using = "xpath", "(.//div[starts-with(@class, 'TimeStamp')])[2]")$getElementText() %>% 
+    unlist()
+  
+  return(list(Professor_ID = professor_id,
+              Professor_Name = professor_name, 
+              Overall_Rating = overall_rating,
+              Department = cleaned_department,
+              Overall_Difficulty = overall_difficulty,
+              Num_of_Ratings = num_of_ratings,
+              Quality = quality, 
+              Difficulty = difficulty,
+              Class_Name = class_name, 
+              Comment = comment, 
+              Review_Date = review_date)) 
+}
+
+
+# Function that collects overall individual professor information
+collect_professor_info <- function(professor_url){
+  
+  # go to the professor's rmp link
+  remDr$navigate(professor_url)
+  
+  # Check for skipping over professors with no ratings
+  rating_check <- remDr$findElement(using = "xpath", "//div[starts-with(@class,'RatingValue__NumRatings')]")$getElementText() %>% 
+    unlist()
+  if (rating_check == "No ratings yet. Add a rating.") { return() }
+  
+  # teacher ID 
+  professor_id <- remDr$getCurrentUrl() %>% 
+    unlist() %>% 
+    str_extract("[:digit:]+$")
+  
+  # teacher name 
+  professor_name <- remDr$findElement(using = "xpath", "//div[starts-with(@class, 'NameTitle__Name')]")$getElementText() %>% 
+    unlist()
+  
+  # teacher rating
+  overall_rating <- remDr$findElement(using = "xpath", "//div[starts-with(@class, 'RatingValue__Numerator')]")$getElementText() %>% 
+    unlist()
+  
+  # department 
+  department <- remDr$findElement(using = "xpath", "//div[starts-with(@class, 'NameTitle__Title')]//span//b")$getElementText() %>% 
+    unlist()
+  cleaned_department <- gsub(" department", "", department)
+  
+  # difficulty
+  overall_difficulty <- remDr$findElement(using = "xpath", "(//div[@class='FeedbackItem__FeedbackNumber-uof32n-1 kkESWs'])[2]")$getElementText() %>% 
+    unlist()
+  
+  # number of ratings 
+  num_of_ratings <- remDr$findElement(using = 'xpath', "//a[@href='#ratingsList']")$getElementText() %>% 
+    unlist() %>% 
+    str_extract("[:digit:]+") %>% as.numeric()
+  
+  # determine how many times to click the "Load More Ratings" button
+  num_of_iterations <- ceiling((num_of_ratings - 20) / 10)
+  
+  # click load more ratings
+  if (num_of_iterations >= 1) { 
+    for (i in 1:num_of_iterations) {
+      load_more <- remDr$findElement(using = "xpath", "//button[text()='Load More Ratings']")
+      
+      y_position <- load_more$getElementLocation()$y - 100 
+      remDr$executeScript(sprintf("window.scrollTo(0, %f)", y_position))
+      load_more$clickElement()
+      Sys.sleep(2)
+    }
+  }
+  
+  # locate the rating body 
+  rating_body <- remDr$findElements(using = 'xpath', "//div[starts-with( @class, 'Rating__RatingBody')]")
+  
+  # run the function on all reviews 
+  reviews <- rating_body %>% map_dfr(~collect_review(., professor_id, professor_name, overall_rating, cleaned_department, overall_difficulty, num_of_ratings))
+  
+  # append the reviews to the main dataframe 
+  all_reviews <<- bind_rows(all_reviews, reviews)
+  
+  # five second pause before it moves to the next professor 
+  Sys.sleep(5)
+}
+
+
+# 1st round - Iterates through every professor
+for (i in 1:nrow(CleanedProfessorNames)) {
+  
+  # Access names for each row using indexing
+  first_name <- CleanedProfessorNames$First_Name[i]
+  last_name <- CleanedProfessorNames$Last_Name[i]
+  
+  Baseurl = "https://www.ratemyprofessors.com/search/professors/877?q="
+  url = paste(Baseurl, last_name, sep ="")
+  remDr$navigate(url)
+  
+  
+  # Check if the "No professors with" message exists
+  tryCatch({
+    # Find the element with a specific XPath
+    no_professors_message <- remDr$findElement(using = "xpath", "//div[@data-testid='no_results_found_area_wrapper_test_id']")
+    
+    # If the element is found, print a message and continue to the next iteration
+    print("No professors found.")
+    next  # Skip to the next iteration
+  }, error = function(e) {
+    # Ignore NoSuchElementException and continue with the rest of the code
+  })
+  
+  
+  # If the 2nd span = "other schools", skip
+  # if "other schools" is present, it means that there are no such professors found at SDSU and is only displaying professors from other schools
+  # Find the h1 element and extract the text content of the bold element within the span
+  other_schools_check <- remDr$findElement(using = "xpath", "//h1[@data-testid='pagination-header-main-results']/span[2]/b")$getElementText()
+  print(other_schools_check)
+  if (other_schools_check == "other schools"){
+    next
+  }
+  
+  # Function to check if the "Show More" button exists
+  showMoreExists <- function() {
+    tryCatch(
+      {
+        show_more <- remDr$findElement(using = "xpath", "//button[text()='Show More']")
+        !is.null(show_more)
+      },
+      error = function(e) {
+        return(FALSE)
+      }
+    )
+  }
+  
+  # If the button is present, click the "Show More" button until it's gone
+  while (showMoreExists()) {
+    show_more <- remDr$findElement(using = "xpath", "//button[text()='Show More']")
+    
+    # Scroll to the element and click it
+    y_position <- show_more$getElementLocation()$y - 100
+    remDr$executeScript(sprintf("window.scrollTo(0, %f)", y_position))
+    show_more$clickElement()
+    
+    # Add a short pause
+    Sys.sleep(2)
+  }
+  
+  # Initialize a character vector of other professors (used later for ProfessorCheck)
+  OtherProfessors <- character(0)
+  # Initialize a logical flag (used later for ProfessorCheck)
+  noMatchFound <- TRUE
+  
+  
+  
+  # Finds the correct professor to navigate to and performs extraction
+  profCards <- remDr$findElements(using = "xpath", "//a[@class='TeacherCard__StyledTeacherCard-syjs0d-0 dLJIlx']")
+  
+  for (profCard in profCards){
+    
+    # inside this a element, find this specific div class and extract the text
+    nameElement <- profCard$findElement(using = "xpath", ".//div[@class='CardName__StyledCardName-sc-1gyrgim-0 cJdVEK']")
+    text <- nameElement$getElementText()
+    name <- sub("QUALITY[\\s\\S]*?\\n[0-9.]+\\n[0-9]+ ratings\\n(.*?)\\n.*", "\\1", text)
+    
+    # compare first name to the name scraped
+    if(grepl(first_name, name,ignore.case = F)){
+      print("Match!")
+      
+      # navigate to the professor's url
+      correctProfessorUrl <- profCard$getElementAttribute("href")[[1]]
+      
+      # Collect the professor's data
+      collect_professor_info(correctProfessorUrl)
+      
+      noMatchFound <- FALSE # Set flag to indicate a match was found
+      
+      break
+    }
+    else{
+      
+      print("No match!")
+      
+      # add the professor's name to the OtherProfessors list for later checking
+      OtherProfessors <- c(OtherProfessors, name)
+    }
+  }
+  
+  # Add the Professor's Name and a list of OtherProfessors to check for possible errors
+  if(noMatchFound){
+    temp_df <- data.frame(
+      First_Name = first_name,
+      Last_Name = last_name,
+      Other_Professors = paste(OtherProfessors, collapse = ", ")
+    )
+    ProfessorCheck <- rbind(ProfessorCheck, temp_df)
+    
+  }
+}  
+
+# Sometimes, the code stops because a certain professor may have a broken webpage. 
+# Will later manually add: Linda Borgen, Beth Sherman, Janet Tempelton, and Michael Underwood
+
+
+# Export the ProfessorCheck dataframe to check which professors may have been skipped due to a misspelling
+file_path <- "C:/Users/jayde/Downloads/RateMyProfessorProject/ProfessorCheck.csv"
+write.csv(ProfessorCheck, file = file_path, row.names = FALSE)
+
+
+
+# After locating which professors were originally missed, clean dataframe and import as SecondRoundSearches to use...
+
+
+# 2nd round - Iterates through all the missed professors
+second_collect_professor_info <- function(professor_url){
+  
+  # go to the professor's rmp link
+  remDr$navigate(professor_url)
+  
+  # Check for skipping over professors with no ratings
+  rating_check <- remDr$findElement(using = "xpath", "//div[starts-with(@class,'RatingValue__NumRatings')]")$getElementText() %>% 
+    unlist()
+  if (rating_check == "No ratings yet. Add a rating.") { return() }
+  
+  # teacher ID 
+  professor_id <- remDr$getCurrentUrl() %>% 
+    unlist() %>% 
+    str_extract("[:digit:]+$")
+  
+  # CHANGED: teacher name 
+  professor_name <- SecondRoundSearches$Real_Name[i]
+  
+  # teacher rating
+  overall_rating <- remDr$findElement(using = "xpath", "//div[starts-with(@class, 'RatingValue__Numerator')]")$getElementText() %>% 
+    unlist()
+  
+  # department 
+  department <- remDr$findElement(using = "xpath", "//div[starts-with(@class, 'NameTitle__Title')]//span//b")$getElementText() %>% 
+    unlist()
+  cleaned_department <- gsub(" department", "", department)
+  
+  # difficulty
+  overall_difficulty <- remDr$findElement(using = "xpath", "(//div[@class='FeedbackItem__FeedbackNumber-uof32n-1 kkESWs'])[2]")$getElementText() %>% 
+    unlist()
+  
+  # number of ratings 
+  num_of_ratings <- remDr$findElement(using = 'xpath', "//a[@href='#ratingsList']")$getElementText() %>% 
+    unlist() %>% 
+    str_extract("[:digit:]+") %>% as.numeric()
+  
+  # determine how many times to click the "Load More Ratings" button
+  num_of_iterations <- ceiling((num_of_ratings - 20) / 10)
+  
+  # click load more ratings
+  if (num_of_iterations >= 1) { 
+    for (i in 1:num_of_iterations) {
+      load_more <- remDr$findElement(using = "xpath", "//button[text()='Load More Ratings']")
+      
+      y_position <- load_more$getElementLocation()$y - 100 
+      remDr$executeScript(sprintf("window.scrollTo(0, %f)", y_position))
+      load_more$clickElement()
+      Sys.sleep(2)
+    }
+  }
+  
+  # locate the rating body 
+  rating_body <- remDr$findElements(using = 'xpath', "//div[starts-with( @class, 'Rating__RatingBody')]")
+  
+  # run the function on all reviews 
+  reviews <- rating_body %>% map_dfr(~collect_review(., professor_id, professor_name, overall_rating, cleaned_department, overall_difficulty, num_of_ratings))
+  
+  # append the reviews to the main dataframe 
+  all_reviews <<- bind_rows(all_reviews, reviews)
+  
+  # five second pause before it moves to the next professor 
+  Sys.sleep(5)
+}
+
+for (i in 1:nrow(SecondRoundSearches)) {
+  
+  # Access data for each row using indexing
+  first_name <- SecondRoundSearches$Search_First_Name[i]
+  last_name <- SecondRoundSearches$Search_Last_Name[i]
+  
+  Baseurl = "https://www.ratemyprofessors.com/search/professors/877?q="
+  url = paste(Baseurl, last_name, sep ="")
+  remDr$navigate(url)
+  
+  
+  # If the button is present, click the "Show More" button until it's gone
+  while (showMoreExists()) {
+    show_more <- remDr$findElement(using = "xpath", "//button[text()='Show More']")
+    
+    # Scroll to the element and click it
+    y_position <- show_more$getElementLocation()$y - 100
+    remDr$executeScript(sprintf("window.scrollTo(0, %f)", y_position))
+    show_more$clickElement()
+    
+    # Add a short pause
+    Sys.sleep(2)
+  }
+  
+
+  # Finds the correct professor to navigate to and performs extraction
+  profCards <- remDr$findElements(using = "xpath", "//a[@class='TeacherCard__StyledTeacherCard-syjs0d-0 dLJIlx']")
+  
+  for (profCard in profCards){
+    
+    # inside this a element, find this specific div class and extract the text
+    nameElement <- profCard$findElement(using = "xpath", ".//div[@class='CardName__StyledCardName-sc-1gyrgim-0 cJdVEK']")
+    text <- nameElement$getElementText()
+    name <- sub("QUALITY[\\s\\S]*?\\n[0-9.]+\\n[0-9]+ ratings\\n(.*?)\\n.*", "\\1", text)
+    
+    # compare full name to the name scraped
+    if(grepl(SecondRoundSearches$Real_Name[i], name,ignore.case = F)){
+      print("Match!")
+      
+      # navigate to the professor's url
+      correctProfessorUrl <- profCard$getElementAttribute("href")[[1]]
+      
+      # Collect the professor's data
+      collect_professor_info(correctProfessorUrl)
+      
+      break
+    }
+    else{
+      
+      print("No match!")
+      
+    }
+  }
+  
+}  
+
+
+# 3rd round - Add the remaining missed professors one by one
+# Linda Borgen, Beth Sherman, Janet Tempelton, and Michael Underwood
+
+# Edit specific index to locate each professor
+specific_index = 1094
+
+# Access data for each row using indexing
+first_name <- CleanedProfessorNames$First_Name[specific_index]
+last_name <- CleanedProfessorNames$Last_Name[specific_index]
+
+Baseurl = "https://www.ratemyprofessors.com/search/professors/877?q="
+url = paste(Baseurl, last_name, sep ="")
+remDr$navigate(url)
+
+# Locate the specific professor card and extract the link
+specific_prof_card<- remDr$findElement(using = "xpath", "//a[@class='TeacherCard__StyledTeacherCard-syjs0d-0 dLJIlx'][3]")
+specific_href <- specific_prof_card$getElementAttribute("href")[[1]]
+
+# Collect the professor's data
+collect_professor_info(specific_href)
+
+
+
+
+# After all the reviews are collected, export all the reviews to a dataset
+file_path <- "C:/Users/jayde,. /Downloads/RateMyProfessorProject/professor_reviews.csv"
+
+# Write all_reviews to a CSV file
+write.csv(all_reviews, file = file_path, row.names = FALSE)
