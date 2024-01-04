@@ -1,0 +1,64 @@
+
+# Collecting All Current 2023 SDSU Professors
+
+library(rvest)
+library(tidyverse)
+library(RSelenium)
+
+rs_driver_object <- rsDriver(browser = "chrome", chromever = "120.0.6099.71")
+remDr <- rs_driver_object$client
+remDr$open()
+
+# Initialize an empty data frame for each professor name
+names_df <- data.frame(First_Name = character(),
+                       Last_Name = character())
+
+# Extract all the professors from this one website
+url = "https://caa.sdsu.edu/curriculum/faculty-listing"
+remDr$navigate(url)
+
+html = read_html(url)
+
+# Get every <li> tag
+li_elements = html_nodes(html, 'li[aria-level="1"]')
+print(li_elements)
+
+# Create a function that processes each li element and returns the first and last name
+process_li <- function(li){
+  
+  # Last Name
+  last_name = html_text(html_nodes(li, 'strong'))
+  
+  # Span Text
+  span_text = html_text(html_nodes(li, 'span'))
+  
+  # First Name
+  first_name = str_split(span_text, ", ")[[1]][2]
+    
+  # return a list with the first and last name
+  return (list(First_Name = first_name,
+               Last_Name = last_name)
+          )
+}
+
+# Map all the text into the processing function
+names_lists <- map(li_elements, process_li)
+
+# Add all of the names into a dataframe
+names_df <- bind_rows(names_df, names_lists)
+names_df %>% View()
+
+# Delete rows that aren't tenured faculty and lecturers
+# The tenured faculty list is at index 1-754 and the lecturer lists is at index 1637-2111.
+
+# Delete rows 2112-2324
+names_df <- names_df[-c(2112:2324), ]
+
+# Delete rows 755-1636
+names_df <- names_df[-c(755:1636), ]
+
+# Some of these names are messed up bc of the way the html is, so I'll clean it in excel
+file_path <- "C:/Users/jayde/Downloads/RateMyProfessorProject/names_df.csv"
+
+# Write the data frame to a CSV file
+write.csv(names_df, file = file_path, row.names = FALSE)
