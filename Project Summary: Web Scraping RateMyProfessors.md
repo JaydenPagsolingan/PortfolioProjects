@@ -1,6 +1,6 @@
 # Project Summary: Web Scraping RateMyProfessors.com
 ## Links
-- [Web Scraping Faculty Listing](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/e3103e8920eea16c4c07c3c85dc1bd8f6e913583/R-Webscraping%20Faculty%20Listing.RMD)
+- [Web Scraping Faculty Listing](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/Web%20Scraping%20Faculty%20Listing%20Using%20R.RMD)
 - [Cleaning Professor Names to Web Scrape](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/CleanedProfessorNames.xlsx)
 - [Web Scraping RateMyProfessors Reviews](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/R-Webscraping%20SDSU%20Ratemyprofessor%20Reviews.RMD)
 - [Cleaning Professor Names to Conduct Second Round Searches](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/SecondRoundSearches.xlsx)
