@@ -1,5 +1,5 @@
 
-# R-Webscraping SDSU Ratemyprofessor.com Reviews
+# Web Scraping SDSU RateMyProfessors.com Reviews
 
 library(tidyverse)
 library(RSelenium)
