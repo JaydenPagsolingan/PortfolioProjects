@@ -1,4 +1,4 @@
-# Project Summary: Traffic Collisions in San Diego (SQL and Tableau)
+# Project Summary: Traffic Collisions in San Diego
 
 ## Links
 - SQL query - https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/SQL%20Project:%20TrafficCollisionsinSD.sql
