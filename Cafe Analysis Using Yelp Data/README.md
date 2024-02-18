@@ -1,7 +1,7 @@
 # Project Summary: Cafe Analysis Using Yelp Data
 ## Links
 - [Cafe Tableau Data Visualization](https://public.tableau.com/app/profile/jayden.pagsolingan8481/viz/CafesinSanDiegoDashboard/Dashboard1)
-- [Python code](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/Yelp%20Cafe%20Analysis/yelpProject.ipynb))
+- [Python code](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/Yelp%20Cafe%20Analysis/yelpProject.ipynb)
 ## Context
 I've worked on minor projects using python and finally decided to dedicate a project. 
 ## Objectives
