@@ -1,12 +1,8 @@
 # Portfolio Projects
 
-To view each project, I recommend looking at each project summary. In each summary, I provide the context,
-objectives, techniques I used, and my overall learning experinece. 
+A respository of all of my completed projects.
 
-## Excel Project: Culture Shock Dance Studio
-- Project Summary
-- Raw Excel Project File
-  
-## SQL & Tableau Project: Traffic Collisions in San Diego
-- Project Summary
-- SQL Query
+To view each project, please open the folder. 
+Each folder contains:
+- A project summary (context, objectives, techniques I used, and my overall learning experinece)
+- the project itself (.xlsb, .sql, .py)
