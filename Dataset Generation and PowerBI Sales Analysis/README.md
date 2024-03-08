@@ -1,7 +1,8 @@
 # Project Summary: Dataset Generation and PowerBI Sales Analysis
 ## Links
 - [Dataset Generation Using Python](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/Dataset%20Generation%20and%20PowerBI%20Sales%20Analysis/Dataset%20Generation.ipynb)
-- [PowerBI Sales Analysis Dashboard](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/Dataset%20Generation%20and%20PowerBI%20Sales%20Analysis/Sales%20Dashboard.pbix)
+- [PowerBI Sales Analysis Dashboard (Download)](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/Dataset%20Generation%20and%20PowerBI%20Sales%20Analysis/Sales%20Dashboard.pbix)
+- [PowerBI Sales Analysis Dashboard (Viewable on Web)](https://app.powerbi.com/groups/me/reports/b1e2b7c0-931c-4aec-b058-2de8ca2bf131/ReportSectionfc519c216e33390b0dd0?experience=power-bi)
 ## Context
 From talking with peers and analyst in the industry, PowerBI seems to be gaining popularity. After gaining experience in Tableau, I wanted to try out PowerBI.  
 ## Objectives
