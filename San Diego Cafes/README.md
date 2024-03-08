@@ -1,4 +1,4 @@
-# Project Summary: Cafe Analysis Using Yelp Data
+# Project Summary: San Diego Cafes
 ## Links
 - [Cafe Tableau Data Visualization](https://public.tableau.com/app/profile/jayden.pagsolingan8481/viz/CafesinSanDiegoDashboard/Dashboard1)
 - [Python code](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/Cafe%20Analysis%20Using%20Yelp%20Data/yelpProject.ipynb)
