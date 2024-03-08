@@ -1,4 +1,4 @@
-# Project Summary: PowerBI Sales Analysis
+# Project Summary: Dataset Generation and PowerBI Sales Analysis
 ## Links
 - 
 ## Context
