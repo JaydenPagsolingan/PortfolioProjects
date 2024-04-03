@@ -172,12 +172,15 @@ FROM collisions
 
 Data Exploration (The Cleaner Version)
 Main Takeaways:
-- Traffic collisions have decreased from 2022 to 2023
-- The top 10 most collision-prone neighborhoods have generally decreased, while some other neighborhoods have increased
-- Misellaneous Hazard Violations of the Vehicle Code are a concerning % of the charges. This leaves a big ? on what the primary
-charges could be if these misc. charges are sorted
+- Traffic collisions have decreased from 2022 to 2023.
+- The top 5 most collision-prone neighborhoods of 2022 have generally decreased in # of collisions, except Mira Mesa.
+- Neighborhoods with Increased Collisions: Logan Heights, Kearny Mesa, Linda Vista, Grantville, Scripps Ranch.
+- Streets with Increased Collisions: El Cajon Blvd, Mira Mesa Blvd, Friars Rd, Imperial Ave, and University Ave.
+- Misellaneous Hazard Violations of the Vehicle Code are a concerning % of the charges. 
+	This leaves a big ? on what the primary charges should be if these misc. charges are sorted.
+- The majority of collisions are caused by unsafe turns and speeding.
 - Unsafe lane changes have decreased, but speeding may increase by the end of 2023. 
-
+- Overall, the traffic division has done a great job at prevent collisions in the more-collision prone areas.
 */
 
 -- 1. What time did most traffic collisions occur?
