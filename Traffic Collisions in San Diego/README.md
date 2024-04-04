@@ -4,16 +4,6 @@
 - Tableau report dashboard - https://public.tableau.com/app/profile/jayden.pagsolingan8481/viz/TrafficCollisionsinSanDiegoReportDashboard/ReportDashboard
 - Tableau interactive dashboard - https://public.tableau.com/app/profile/jayden.pagsolingan8481/viz/TrafficCollisionsinSanDiegoInteractiveDashboard/InteractiveDashboard
 
-## Insights
-- Traffic collisions have decreased from 2022 to 2023.
-- The top 5 most collision-prone neighborhoods of 2022 have generally decreased in # of collisions, except Mira Mesa.
-- Neighborhoods with Increased Collisions: Logan Heights, Kearny Mesa, Linda Vista, Grantville, Scripps Ranch.
-- Streets with Increased Collisions: El Cajon Blvd, Mira Mesa Blvd, Friars Rd, Imperial Ave, and University Ave.
-- Misellaneous Hazard Violations of the Vehicle Code are a concerning % of the charges. 
-	This leaves a big ? on what the primary charges should be if these misc. charges are sorted.
-- The majority of collisions are caused by unsafe turns and speeding.
-- Unsafe lane changes have decreased, but speeding may increase by the end of 2023. 
-
 ## Context
 I just finished my excel project and wanted to learn SQL. I actually originally wanted to skip straight to python for data analysis because it seemed cooler,
 but I wanted to be versatile so I ended up choosing SQL. 
@@ -62,6 +52,16 @@ Also, I forgot to mention, but I've never tried Tableau before. I had trouble fi
 down at my computer (while playing some Christmas jazz music) and got it done. 
 
 I even emailed my dashboards to the SDPD to use. Hopefully they see it!
+
+## Insights
+- Traffic collisions have decreased from 2022 to 2023.
+- The top 5 most collision-prone neighborhoods of 2022 have generally decreased in # of collisions, except Mira Mesa.
+- Neighborhoods with Increased Collisions: Logan Heights, Kearny Mesa, Linda Vista, Grantville, Scripps Ranch.
+- Streets with Increased Collisions: El Cajon Blvd, Mira Mesa Blvd, Friars Rd, Imperial Ave, and University Ave.
+- Misellaneous Hazard Violations of the Vehicle Code are a concerning % of the charges. 
+	This leaves a big ? on what the primary charges should be if these misc. charges are sorted.
+- The majority of collisions are caused by unsafe turns and speeding.
+- Unsafe lane changes have decreased, but speeding may increase by the end of 2023. 
 
 ## My two biggest takeaways from this whole project
 - Keep your audience and KPIs in mind 24/7. Planning is key.
