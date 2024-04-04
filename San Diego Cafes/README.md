@@ -14,6 +14,15 @@ I've worked on minor projects using python and finally decided to dedicate a pro
 - Data Cleaning
 - Exploratory Data Analysis
 - Geospatial Visualizations
+## Insights
+- Kearny Mesa has the most popular cafes in San Diego.
+- The order of which cafes show up on Yelp changes slightly day-to-day.
+- More than 3/4 of cafes serve coffee.
+- Cafes typically have coffee or cafe in their name.
+- 1/5 of cafes consider themselves a breakfast/brunch spot and another 1/5, a dessert spot.
+- More than half of the top 50 cafes diversify themself in another category (ex/ gluten_free, mexican, asianfusion)
+- A surprising 1/10 cafes pride themselves on offering acaibowls.
+- The majority of popular cafes on Yelp are open 7 days out of the week.
 ## Thought Process and What I Learned
 Smoother process than the last couple of projects. 
 
