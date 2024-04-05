@@ -1,11 +1,6 @@
 # Project Summary: Web Scraping RateMyProfessors.com
 ## Links
-- [Web Scraping Faculty Listing](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/Web%20Scraping%20Faculty%20Listing%20Using%20R.RMD)
-- [Cleaning Professor Names to Web Scrape](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/CleanedProfessorNames.xlsx)
-- [Web Scraping RateMyProfessors Reviews](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/Web%20Scraping%20SDSU%20RateMyProfessors%20Reviews.RMD)
-- [Cleaning Professor Names to Conduct Second Round Searches](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/SecondRoundSearches.xlsx)
 - [Youtuber's RateMyProfessors Web Scraping Code](https://github.com/ggSamoora/TutorialsBySamoora/blob/main/rate_my_professor_script.Rmd)
-- [Extracted Professor Reviews](https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/professor_reviews.csv)
 ## Context
 I wanted to get experience web scraping by extracting RateMyProfessors reviews. Initially, I wanted to use an API, but the APIs I found didn't work with my computer and the RMP page dynamically loads. Thus, I forced myself to learn R and web scrape using RStudio. 
 ## Objectives
