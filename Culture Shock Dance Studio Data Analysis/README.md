@@ -1,8 +1,5 @@
 # Project Summary: Culture Shock Dance Studio Data Analysis in Excel
 
-## Link
-- Excel Download: https://github.com/JaydenPagsolingan/PortfolioProjects/blob/main/Excel%20Project%20-%20CS%20Dance%20Studio.xlsb
-
 ## Context
 I was getting more into data analysis (playing with pivot tables and dashboards) when I thought, "Wouldn't it be really cool to do data analysis on dance?" Dance is my first and biggest passion
 so I thought it should serve as the basis for my first project. 
