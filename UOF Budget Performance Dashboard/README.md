@@ -45,6 +45,20 @@ Dashboard Features:
 - Fiscal Year, Division, and Category filter - allowing enhancing analysis across all visualizations
 
 ## Insights
+
+**High-level Summary:**
+SDSU's $132.76 million favorable variance is primarily driven by changes in reserves accounts, not operational efficiency.
+
+Designated Balances and Reserves account for 81% of total variances, with Academic Affairs and Student Affair and Cultural Diversity divisions representing 59% of reserve variances alone.
+While fewer divisions are overbudget compared to the FY23-24, the 25% increase in total variance reflects changes in reserve planning than improved spending control.
+
+Secondary Concerns:
+- Academic Affairs consistently maintains a $37-$46 million annual variance, warranting an analysis of if this reflects conservative budgeting or intentional reserves
+- Operating Expense and Equipment has high percentage variances across many divisions (17/25 divisions), prompting further investigation
+- College of Graduate studies' high percentage variance is largely driven by reserves, with minimal operational impact  
+
+Recommendation: Separate reserve accounts from operational spending in future variance analysis. Investigate Academic Affair's annual variance, operating expense and equipment variances across divisions, and adjust future budget projections based on findings.
+
 **1. SDSU’s favorable variance increased in FY24-25, but the cause of the increase should be further investigated.**
 
 Evidence: 
@@ -115,6 +129,4 @@ Interpretation: The College of Graduate Studies high percentage variance is larg
 ## Challenges Encountered
 1. The power query extracts all table data, including the summed up totals. These totals were left untouched and included in our dataset as I believed it was easier to create DAXs. While the DAX formulas were simple, the "Total Uses" rows prevented category-level visualizations from interacting with other filters. To fix, I created a back-up of the project and removed all "Total Uses" rows from the dataset using Power Query. While I had to replace visualization variables, category-level visualizations became compatible to the rest of the dashboard, resulting in deeper analysis capabilities.   
 
-
-## Next Steps
 
