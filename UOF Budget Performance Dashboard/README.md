@@ -47,6 +47,7 @@ Dashboard Features:
 ## Insights
 
 **High-level Summary:**
+
 SDSU's $132.76 million favorable variance is primarily driven by changes in reserves accounts, not operational efficiency.
 
 Designated Balances and Reserves account for 81% of total variances, with Academic Affairs and Student Affair and Cultural Diversity divisions representing 59% of reserve variances alone.
@@ -58,6 +59,8 @@ Secondary Concerns:
 - College of Graduate studies' high percentage variance is largely driven by reserves, with minimal operational impact  
 
 Recommendation: Separate reserve accounts from operational spending in future variance analysis. Investigate Academic Affair's annual variance, operating expense and equipment variances across divisions, and adjust future budget projections based on findings.
+
+**In-Depth Analysis Breakdown** 
 
 **1. SDSU’s favorable variance increased in FY24-25, but the cause of the increase should be further investigated.**
 
