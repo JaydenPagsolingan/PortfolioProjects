@@ -42,6 +42,7 @@ Utilized a 1-3-10 design approach to ensure insights are clearly visible
 
 ## Insights
 **1. SDSU’s favorable variance increased in FY24-25, but the cause of the increase should be further investigated.**
+
 Evidence: 
 - Overall spending was $132.76 million below budget, with a 10% favorable variance
 - 0/25 divisions were over budget compared to the 3/25 divisions over budget in the 2023-2024 fiscal year 
