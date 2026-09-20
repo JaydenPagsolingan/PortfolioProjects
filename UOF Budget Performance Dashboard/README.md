@@ -46,9 +46,7 @@ Dashboard Features:
 
 ## Insights
 
-**High-level Summary:**
-
-SDSU's $132.76 million favorable variance is primarily driven by changes in reserves accounts, not operational efficiency.
+**High-level Summary: SDSU's $132.76 million favorable variance is primarily driven by changes in reserves accounts, not operational efficiency.**
 
 Designated Balances and Reserves account for 81% of total variances, with Academic Affairs and Student Affair and Cultural Diversity divisions representing 59% of reserve variances alone.
 While fewer divisions are overbudget compared to the FY23-24, the 25% increase in total variance reflects changes in reserve planning than improved spending control.
