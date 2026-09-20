@@ -2,6 +2,7 @@
 Power BI | Power Query | Excel | DAX | Financial Analysis
 
 <img width="1313" height="728" alt="Fiscal Year Filter" src="https://github.com/user-attachments/assets/aefc620d-c00b-4708-ad0a-ae9399659430" />
+
 ## Project Overview
 
 **What:** An interactive dashboard analyzing SDSU University Operating Fund budget data across fiscal years, divisions, and spending categories.
