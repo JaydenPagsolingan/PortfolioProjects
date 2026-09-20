@@ -41,7 +41,7 @@ Utilized a 1-3-10 design approach to ensure insights are clearly visible
 - Fiscal Year, Division, and Category filter - allowing enhancing analysis across all visualizations
 
 ## Insights
-**1. SDSU’s favorable variance increased in FY24-25, but the cause of the increase should be further investigated.
+**1. SDSU’s favorable variance increased in FY24-25, but the cause of the increase should be further investigated.**
 Evidence: 
 - Overall spending was $132.76 million below budget, with a 10% favorable variance
 - 0/25 divisions were over budget compared to the 3/25 divisions over budget in the 2023-2024 fiscal year 
@@ -51,10 +51,10 @@ Evidence:
 - FY 24-25 had a $132.76 million favorable variance
 Interpretation:
 - Budget performance improved based on the fewer divisions over budget compared to the previous fiscal year. However, the increase in total favorable variance does not indicate increased efficiency. It may instead reflect changes in budget assumptions and reserve activity.
-*Potential Action:
+*Potential Action:*
 - Further investigate the $26.76 million variance increase by division and category. Separate operational spending variances from reserve activities before making any evaluations or budgetary decisions.
 
-**2. Designated Balances and Reserves accounts for the majority of SDSU’s FY24-25 total variance.
+**2. Designated Balances and Reserves accounts for the majority of SDSU’s FY24-25 total variance.**
 Evidence: 
 - Designated Balances and Reserves has a $107 million favorable variance, representing 81% of SDSU’s total variance
 - Of this category, Academic Affairs and Student Affairs and Campus Diversity represent more than half of this variance (59.23%)
@@ -62,10 +62,10 @@ Evidence:
 - Student Affairs and Campus Diversity with a $29 million favorable variance
 Interpretation: 
 - SDSU’s variance is heavily influenced by its Designated Balances and Reserves, indicating SDSU’s $132.76 million total variance should not be solely interpreted as lower operating spending. Additionally, Academic Affairs and SA+CD are two departments that have the highest designated balances and reserves by a wide margin, indicating they have a big influence on SDSU’s total variance.
-*Potential Action: 
+*Potential Action:* 
 - To properly evaluate resource utilization, Designated Balances and Reserves must be separate from other operational expenses. Analyze these expenses by diving further into the purpose of each category and the expected use of these budgets. Determine if other recurring variances represent intentional reserve planning or overbudgeting.
 
-**3. Academic Affairs consistently has one of SDSU’s largest favorable dollar variances, prompting further investigation.
+**3. Academic Affairs consistently has one of SDSU’s largest favorable dollar variances, prompting further investigation.**
 Evidence: 
 - Each fiscal year, Academic Affairs accounts for a large dollar variance of SDSU’s total variance
 - FY22-23 - $37 million
@@ -76,10 +76,10 @@ Evidence:
 - In FY24-25, Operating Expense and Equipment had a $6.8 million variance at 20% variance.
 Interpretation: 
 - Academic Affairs has a history of having a large favorable variance. While Designated Balances and Reserves accounts for a large percentage of this variance, Operating Expense and Equipment is the secondary contributor.
-*Potential Action: 
+*Potential Action:* 
 Further investigation needs to be done with Designated Balances and Reserves and Operating Expense and Equipment categories to determine whether favorable variances are caused by intentional reserve planning, delayed spending, or conservative budgeting. Use these findings to inform future budget projections.
 
-**4. Operating Expense and Equipment variances have a consistent substantial variance across many divisions.
+**4. Operating Expense and Equipment variances have a consistent substantial variance across many divisions.**
 Evidence: 
 - 17/25 divisions reported an Operating Expense and Equipment variance greater than 15%
 - However, dollar variances must be evaluated alongside percentage variances
@@ -88,10 +88,10 @@ Evidence:
 - Because of this high variance difference, further investigation needs to be done to identify if this was a budget transfer or budget adjustment.
 Interpretation:
 - A large percentage of divisions experience fluctuations in Operating Expense and Equipment variances; Student Affairs’ in particular budgeted significantly less than usual, creating a large unfavorable variance.
-*Potential Action:
+*Potential Action:*
 - Dive deeper into each division’s Operating Expense and Equipment variances to better understand the impact of this category’s variance.
 
-**5. The College of Graduate Studies has the highest division percentage variance among divisions, but a relatively smaller dollar variance.
+**5. The College of Graduate Studies has the highest division percentage variance among divisions, but a relatively smaller dollar variance.**
 Evidence: 
 - The College of Graduate Studies has the highest division percentage variance (36%)
 - Designated Balances and Reserves account for $2.2 million of the $2.79 million total variance
@@ -100,7 +100,7 @@ Evidence:
 - FY24-25 was the first year the division budgeted and spent on work study. They budgeted $4,500 but spent $6,434, resulting in an unfavorable $1,934 variance.
 Interpretation:
 - The College of Graduate Studies high percentage variance is largely influenced by designated balances and reserves. However, the Work Study variance provides a small opportunity to improve future budget projections.
-*Potential Action:
+*Potential Action:*
 - Review factors contributing to the Work Study budget and what items contributed to the actual spending total. If similar spending is expected in the future, future budget projections can be modified.
 
 
