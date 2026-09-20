@@ -1,14 +1,22 @@
-# Project: SDSU Budget Analysis Dashboard
-## Project Overview and Objectives
+# Project: SDSU University Operating Fund Budget Analysis Dashboard
+Power BI | Power Query | Excel | DAX | Financial Analysis
 
-**What:** An interactive dashboard extracting SDSU University Operating Fund budget data.
+<img width="1318" height="736" alt="Dashboard Screenshot" src="https://github.com/user-attachments/assets/754bd5a5-4deb-4cf1-b0a1-18154479a279" />
 
-**Objectives:**
-- Understand how SDSU is managing its financial resources over time
-- Enable SDSU stakeholders to analyze, track, and manage SDSU budget spending
-- Support data-driven decisions and identify spending patterns across divisions
+## Project Overview
 
-**Key Technologies:** Power Query, Power BI, Excel, DAX
+**What:** An interactive dashboard analyzing SDSU University Operating Fund budget data across fiscal years, divisions, and spending categories.
+
+**Business Problem:** The SDSU Budget and Finance department has a repository of budget reports ranging from 2021 to 2026. However, there is not a publicly available way to conduct a variance analysis of budget data. This project aims to transform raw budget report pdfs into a consolidated dataset and dashboard, enabling SDSU stakeholders to monitor and analyze budget variances, investigate divisions and spending categories, and inform future budget forecasting and resource planning. 
+
+**Business Objectives**
+- What is SDSU's UOF financial position in FY24-25?
+- What are the largest favorable and unfavorable variances by division and category?
+- Which recurring variances warrant further investigation?
+
+**Intended Stakeholder**
+Primary Audience: Senior leadership and budget stakeholders
+Use case: Monitor budget performance, investigate variances and trends, and inform resource planning.
 
 ## Data Pipeline
 
