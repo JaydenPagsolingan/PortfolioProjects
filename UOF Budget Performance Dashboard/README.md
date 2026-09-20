@@ -15,9 +15,9 @@
 **Extract:** Downloaded SDSU Fiscal Budget Reports from the SDSU University Budget website.
 
 Reports used:
-FY 23-24 budget report: https://budget.sdsu.edu/_resources/files/budget/2023_24_university_budget_reports_v2.pdf
-FY 24-25 budget report: https://budget.sdsu.edu/_resources/files/budget/2024_25_university_budget_reports_uof.pdf
-FY 25-26 budget report: https://budget.sdsu.edu/_resources/files/budget/2025-26-university-budget-reports-uof-8-22-25.pdf
+- FY 23-24 budget report: https://budget.sdsu.edu/_resources/files/budget/2023_24_university_budget_reports_v2.pdf
+- FY 24-25 budget report: https://budget.sdsu.edu/_resources/files/budget/2024_25_university_budget_reports_uof.pdf
+- FY 25-26 budget report: https://budget.sdsu.edu/_resources/files/budget/2025-26-university-budget-reports-uof-8-22-25.pdf
 
 **Transform:** Used Power Query in Excel to clean and standardize budget data.
 
@@ -27,7 +27,7 @@ FY 25-26 budget report: https://budget.sdsu.edu/_resources/files/budget/2025-26-
 - Standardized data types for budget, actual, and variance fields
 - Appended transformed tables of the same fiscal year to create a master table
 
-**Load:**: Data into Power BI.
+**Load:** Data into Power BI.
 - Loaded transformed data tables into Power BI
 
 ## Dashboard Features
