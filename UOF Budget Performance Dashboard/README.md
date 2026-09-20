@@ -32,8 +32,13 @@ Reports used:
 
 ## Dashboard Features
 
-Utilized a 1-3-10 design approach to ensure insights are clearly visible
+Utilized a 1-3-10 design approach to ensure insights are clearly visible.
 
+In 1 second: What is our overall budget position?
+In 3 seconds: Which divisions and categories are driving the variance?
+In 10 seconds: What is the root cause for these variances?
+
+Dashboard Features:
 - KPI cards - display total budget, total actual, total variance ($), total variance (%), and # of divisions over budget
 - Variance Breakdown stacked bar chart - shows total variance ($) across divisions/categories; uses a slicer to toggle between division-level analysis and category-level analysis
 - Budget vs Actual Trends line chart - displays total budget and total actual from FY22-23 to FY24-25
@@ -108,4 +113,9 @@ Interpretation: The College of Graduate Studies high percentage variance is larg
 
 *Potential Action:* Review factors contributing to the Work Study budget and what items contributed to the actual spending total. If similar spending is expected in the future, future budget projections can be modified.
 
+## Challenges Encountered
+1. The power query extracts all table data, including the summed up totals. These totals were left untouched and included in our dataset as I believed it was easier to create DAXs. While the DAX formulas were simple, the "Total Uses" rows prevented category-level visualizations from interacting with other filters. To fix, I created a back-up of the project and removed all "Total Uses" rows from the dataset using Power Query. While I had to replace visualization variables, category-level visualizations became compatible to the rest of the dashboard, resulting in deeper analysis capabilities.   
+
+
+## Next Steps
 
