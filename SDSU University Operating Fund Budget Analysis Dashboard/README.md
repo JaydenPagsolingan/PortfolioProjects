@@ -47,7 +47,7 @@ Performed data quality and validation checks throughout the ETL process to ensur
 - Confirmed all 25 divisions were consolidated in the final FY dataset
 - Compared extracted totals with reported totals in budget reports
 - Validated data tables to ensure consistent data structures
-- Investigated "Total Uses" rows, identified rows caused downstream visualization errors, and removed rows to prevent double-counting and improve filtering interactinos
+- Investigated "Total Uses" rows, identified rows caused downstream visualization errors, and removed rows to prevent double-counting and improve filtering interactions
 - Revalidated dashboard totals with report totals
 
 ## Dashboard Design
@@ -56,7 +56,7 @@ Utilized a 1-3-10 design approach to ensure insights are clearly visible.
 | -------- | -------- | -------- |
 | In 1 second | What is our overall budget position? | KPI Cards |
 | In 3 seconds | Which divisions and categories are driving the variance? | Variance Breakdown Bar and Line Charts |
-| In 10 seconds | What are potential factor contributing to these variances? | Detailed Variance Table + Filters |
+| In 10 seconds | What factors may be contributing to these variances? | Detailed Variance Table + Filters |
 
 ## Dashboard Features
 - KPI cards - display total budget, total actual, total variance ($), total variance (%), and # of divisions over budget
@@ -109,7 +109,7 @@ Evidence:
 - FY 23-24 had a $106 million favorable variance
 - FY 24-25 had a $132.76 million favorable variance
   
-Interpretation: In FY24-25, Fewer divisions over budget compared to the previous fiscal year. However, the increase in total favorable variance does not indicate increased efficiency. It may instead reflect changes in budget assumptions and reserve activity.
+Interpretation: In FY24-25, fewer divisions over budget compared to the previous fiscal year. However, the increase in total favorable variance does not indicate increased efficiency. It may instead reflect changes in budget assumptions and reserve activity.
   
 *Follow-up Analysis:* Further investigate the $26.76 million variance increase by division and category. Separate operational spending variances from reserve activities before making any evaluations or budgetary decisions.
 
