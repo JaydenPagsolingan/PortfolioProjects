@@ -15,6 +15,7 @@ Power BI | Power Query | Excel | DAX | Financial Analysis
 - Which recurring variances warrant further investigation?
 
 **Intended Stakeholder**
+
 Primary Audience: Senior leadership and budget stakeholders
 Use case: Monitor budget performance, investigate variances and trends, and inform resource planning.
 
