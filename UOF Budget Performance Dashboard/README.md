@@ -33,10 +33,9 @@ Reports used:
 ## Dashboard Features
 
 Utilized a 1-3-10 design approach to ensure insights are clearly visible.
-
-In 1 second: What is our overall budget position?
-In 3 seconds: Which divisions and categories are driving the variance?
-In 10 seconds: What is the root cause for these variances?
+- In 1 second: What is our overall budget position?
+- In 3 seconds: Which divisions and categories are driving the variance?
+- In 10 seconds: What is the root cause for these variances?
 
 Dashboard Features:
 - KPI cards - display total budget, total actual, total variance ($), total variance (%), and # of divisions over budget
