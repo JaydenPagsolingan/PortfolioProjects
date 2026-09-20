@@ -50,10 +50,11 @@ Evidence:
 - FY 22-23 had a $110 million favorable variance
 - FY 23-24 had a $106 million favorable variance
 - FY 24-25 had a $132.76 million favorable variance
+  
 Interpretation:
 - Budget performance improved based on the fewer divisions over budget compared to the previous fiscal year. However, the increase in total favorable variance does not indicate increased efficiency. It may instead reflect changes in budget assumptions and reserve activity.
-*Potential Action:*
-- Further investigate the $26.76 million variance increase by division and category. Separate operational spending variances from reserve activities before making any evaluations or budgetary decisions.
+  
+*Potential Action:* Further investigate the $26.76 million variance increase by division and category. Separate operational spending variances from reserve activities before making any evaluations or budgetary decisions.
 
 **2. Designated Balances and Reserves accounts for the majority of SDSU’s FY24-25 total variance.**
 Evidence: 
