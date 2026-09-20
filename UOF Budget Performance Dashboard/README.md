@@ -60,7 +60,7 @@ Secondary Concerns:
 
 Recommendation: Separate reserve accounts from operational spending in future variance analysis. Investigate Academic Affair's annual variance, operating expense and equipment variances across divisions, and adjust future budget projections based on findings.
 
-**In-Depth Analysis Breakdown** 
+## In-Depth Analysis Breakdown 
 
 **1. SDSU’s favorable variance increased in FY24-25, but the cause of the increase should be further investigated.**
 
