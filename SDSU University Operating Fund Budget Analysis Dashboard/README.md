@@ -2,7 +2,6 @@
 Power BI | Power Query | Excel | DAX | Financial Analysis
 
 <img width="1318" height="736" alt="Dashboard Screenshot" src="https://github.com/user-attachments/assets/754bd5a5-4deb-4cf1-b0a1-18154479a279" />
-
 ## Project Overview
 
 **What:** An interactive dashboard analyzing SDSU University Operating Fund budget data across fiscal years, divisions, and spending categories.
@@ -64,6 +63,18 @@ Utilized a 1-3-10 design approach to ensure insights are clearly visible.
 - Budget vs Actual Trends line chart - displays total budget and total actual from FY22-23 to FY24-25
 - Budget Variance Table - a table showing all budget, actual, total variance ($), and total variance (%) across divisions, categories, and fiscal years
 - Fiscal Year, Division, and Category filter - allowing enhancing analysis across all visualizations
+
+Variance Breakdown Slicer
+<img width="690" height="511" alt="Variance Breakdown Slicer" src="https://github.com/user-attachments/assets/321bffca-3038-4118-b802-4b255c7ac254" />
+
+Fiscal Year Filter
+<img width="1313" height="728" alt="Fiscal Year Filter" src="https://github.com/user-attachments/assets/aefc620d-c00b-4708-ad0a-ae9399659430" />
+
+Division Filter
+<img width="1313" height="728" alt="Division Filter" src="https://github.com/user-attachments/assets/f4ff7eb5-b492-47d2-89a4-9b4279c8c27d" />
+
+Category Filter
+<img width="1313" height="728" alt="Category Filter" src="https://github.com/user-attachments/assets/19ea6c65-f329-41a8-9799-73bc99f08e75" />
 
 ## DAX Measures
 - Total Budget = SUM(BudgetData[Budget])
