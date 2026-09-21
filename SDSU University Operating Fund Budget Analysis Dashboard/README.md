@@ -2,6 +2,7 @@
 Power BI | Power Query | Excel | DAX | Financial Analysis
 
 <img width="1313" height="728" alt="Fiscal Year Filter" src="https://github.com/user-attachments/assets/aefc620d-c00b-4708-ad0a-ae9399659430" />
+*All data powering the dashboard is extracted from publicly accessible budget reports from SDSU.
 
 ## Project Overview
 
